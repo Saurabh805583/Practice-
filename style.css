@@ -1,0 +1,102 @@
+/* BAG */
+
+#bag{
+display:inline-block;
+margin-left:10px;
+position:relative;
+animation:throwBag 2s 5s forwards;
+}
+
+/* BAG THROW */
+
+@keyframes throwBag{
+
+0%{
+transform:translate(0,0) rotate(0deg);
+}
+
+50%{
+transform:translate(180px,-120px) rotate(180deg);
+}
+
+100%{
+transform:translate(260px,20px) rotate(360deg);
+}
+
+}
+
+/* LOGIN BOX */
+
+.login{
+position:absolute;
+
+top:50%;
+left:50%;
+
+transform:translate(-50%,-50%) scale(0);
+
+background:rgba(0,0,0,.8);
+
+border:2px solid #00ff00;
+
+padding:30px;
+
+border-radius:20px;
+
+box-shadow:0 0 25px #00ff00;
+
+display:flex;
+
+flex-direction:column;
+
+gap:15px;
+
+animation:showLogin 1s 7s forwards;
+}
+
+/* LOGIN POPUP */
+
+@keyframes showLogin{
+
+from{
+transform:translate(-50%,-50%) scale(0);
+opacity:0;
+}
+
+to{
+transform:translate(-50%,-50%) scale(1);
+opacity:1;
+}
+
+}
+
+.login h2{
+color:#00ff00;
+text-align:center;
+}
+
+.login input{
+
+padding:12px;
+
+background:black;
+
+border:1px solid #00ff00;
+
+color:#00ff00;
+
+outline:none;
+}
+
+.login button{
+
+padding:12px;
+
+background:#00ff00;
+
+border:none;
+
+cursor:pointer;
+
+font-weight:bold;
+}
